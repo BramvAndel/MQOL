@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "mqol",
+  "version": "${version}",
+  "name": "MQOL",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/mqol/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.vanandel.mqol.client.MqolClient"
+    ],
+    "main": [
+      "dev.vanandel.mqol.Mqol"
+    ]
+  },
+  "mixins": [
+    "mqol.mixins.json",
+    {
+      "config": "mqol.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
